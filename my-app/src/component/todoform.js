@@ -4,11 +4,11 @@ class TodoForm extends Component{
     render(){
         return(
             <form onSubmit={this.props.addTask}>
-            <input type="text" 
+            <input type="text" width="50" height="50"
             value={this.props.currentTask}
             onChange={this.props.updateTask}
             />
-            <button type='Submit'>Submit</button>
+            <button className='Submit' type='Submit'>Submit</button>
             </form>
         )
     }

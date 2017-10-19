@@ -10,11 +10,12 @@ class Todo extends Component {
       }
       } className={this.props.detail.completed ? 'completed':''}>
       {this.props.detail.name}
-      <button onClick={(evt) =>{
+      <button className='Delete' onClick={(evt) =>{
         evt.stopPropagation();
         this.props.delTask(this.props.index)
         }}>Delete</button>
       </li>
+      
     );
   }
 }

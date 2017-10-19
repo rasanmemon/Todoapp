@@ -62,6 +62,7 @@ class TodoApp extends React.Component {
 
     render() {
       return (
+          <fieldset>
           <section>
               <TodoForm
                currentTask={this.state.currentTask} 
@@ -81,6 +82,7 @@ class TodoApp extends React.Component {
             }
         </ul>
         </section>
+        </fieldset>
       );
     }
   }
