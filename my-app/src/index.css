@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif ;
+  background-color: violet;
+  text-align: center;
 }
 
 .completed{
@@ -64,4 +66,19 @@ input{
 }
 input:focus{
   border: 3px solid blue;
+}
+.updateItem{
+  height: 50;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 9px #999; */
 }

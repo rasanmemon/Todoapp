@@ -11,19 +11,28 @@ class TodoApp extends React.Component {
       this.updateTask=this.updateTask.bind(this);
       this.addTask=this.addTask.bind(this);
       this.delTask=this.delTask.bind(this);
+      this.editTask=this.editTask.bind(this);
       this.state={
         Todolist:[
-    //       {name:"rasan",
-    //       completed:false
-    //     },
-    //   {
-    //    name:"umer",
-    //    completed:false 
-    //   }
+          {name:"rasan",
+          completed:false
+        },
+      {
+       name:"umer",
+       completed:false 
+      }
         ],
       currentTask:''
       };
     }
+          editTask(index,newValue){
+            var Todolist = this.state.Todolist;
+            var task = Todolist[index];
+            task['name']=newValue;
+            this.setState({
+                Todolist
+            })
+        }
   changeStatus(index){
       var Todolist = this.state.Todolist
       var task = Todolist[index]
@@ -73,9 +82,10 @@ class TodoApp extends React.Component {
             {
                 this.state.Todolist.map((todo , index) =>{
                     return (<Todo 
-                    key={todo.name}
+                    key={index}
                      index={index}
                      delTask={this.delTask}
+                     editTask={this.editTask}
                      clickHandler={this.changeStatus}
                       detail={todo}/>)
                 })
